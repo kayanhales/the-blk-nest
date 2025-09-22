@@ -22,6 +22,8 @@ Every submission helps another family. Every resource shared strengthens the com
 
 Want to add a provider or resource? See Contributing.MD
 
+---
+
 ## 📬 Questions?
 
 - Open an **Issue** here on GitHub  
