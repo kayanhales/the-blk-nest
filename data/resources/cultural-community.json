@@ -1,0 +1,25 @@
+{
+    "title": "Cultural & Community",
+    "icon": "BookOpen",
+    "color": "text-orange-500",
+    "resources": [
+      {
+        "title": "Black Children's Books",
+        "description": "Diverse literature for young readers",
+        "url": "#",
+        "type": "Educational"
+      },
+      {
+        "title": "Cultural Events Calendar",
+        "description": "Black history and cultural celebrations",
+        "url": "#",
+        "type": "Events"
+      },
+      {
+        "title": "Community Organizations",
+        "description": "Local Black community groups and nonprofits",
+        "url": "#",
+        "type": "Directory"
+      }
+    ]
+  }

@@ -1,6 +1,6 @@
-import pediatricians from "@/data/pediatricians.json"
-import nannies from "@/data/nannies.json"
-import pelvicFloorTherapists from "@/data/pelvic-floor-therapists.json"
+import pediatricians from "@/data/providers/pediatricians.json"
+import nannies from "@/data/providers/nannies.json"
+import pelvicFloorTherapists from "@/data/providers/pelvic-floor-therapists.json"
 
 export interface Provider {
   id: string

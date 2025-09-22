@@ -1,0 +1,25 @@
+{
+    "title": "Health & Wellness",
+    "icon": "Heart",
+    "color": "text-red-500",
+    "resources": [
+      {
+        "title": "Black Maternal Health Alliance",
+        "description": "Resources and advocacy for Black maternal health",
+        "url": "https://blackmaternalhealthalliance.org",
+        "type": "Organization"
+      },
+      {
+        "title": "Mental Health Resources for Black Families",
+        "description": "Culturally competent mental health support",
+        "url": "#",
+        "type": "Guide"
+      },
+      {
+        "title": "Sickle Cell Disease Association",
+        "description": "Support and resources for sickle cell disease",
+        "url": "#",
+        "type": "Organization"
+      }
+    ]
+  }

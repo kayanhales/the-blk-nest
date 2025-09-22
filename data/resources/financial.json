@@ -1,0 +1,25 @@
+{
+    "title": "Financial Resources",
+    "icon": "DollarSign",
+    "color": "text-green-500",
+    "resources": [
+      {
+        "title": "Black-Owned Banks Directory",
+        "description": "Support Black-owned financial institutions",
+        "url": "#",
+        "type": "Directory"
+      },
+      {
+        "title": "Financial Literacy for Families",
+        "description": "Money management and investment basics",
+        "url": "#",
+        "type": "Educational"
+      },
+      {
+        "title": "Small Business Resources",
+        "description": "Support for Black entrepreneurs",
+        "url": "#",
+        "type": "Business"
+      }
+    ]
+  }

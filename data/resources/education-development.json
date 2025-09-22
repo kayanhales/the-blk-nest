@@ -1,0 +1,25 @@
+{
+    "title": "Education & Development",
+    "icon": "GraduationCap",
+    "color": "text-blue-500",
+    "resources": [
+      {
+        "title": "Black History Curriculum Resources",
+        "description": "Age-appropriate Black history learning materials",
+        "url": "#",
+        "type": "Educational"
+      },
+      {
+        "title": "STEM Programs for Black Youth",
+        "description": "Science and technology programs",
+        "url": "#",
+        "type": "Programs"
+      },
+      {
+        "title": "College Prep for Black Students",
+        "description": "Scholarship and college readiness resources",
+        "url": "#",
+        "type": "Guide"
+      }
+    ]
+  }

@@ -1,0 +1,25 @@
+{
+    "title": "Parenting & Family",
+    "icon": "Baby",
+    "color": "text-pink-500",
+    "resources": [
+      {
+        "title": "Positive Discipline Techniques",
+        "description": "Culturally affirming parenting approaches",
+        "url": "#",
+        "type": "Guide"
+      },
+      {
+        "title": "Talking to Kids About Race",
+        "description": "Age-appropriate conversations about identity",
+        "url": "#",
+        "type": "Educational"
+      },
+      {
+        "title": "Single Parent Support Groups",
+        "description": "Community support for single parents",
+        "url": "#",
+        "type": "Support"
+      }
+    ]
+  }

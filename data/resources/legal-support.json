@@ -1,0 +1,25 @@
+{
+    "title": "Legal Support",
+    "icon": "Scale",
+    "color": "text-purple-500",
+    "resources": [
+      {
+        "title": "Know Your Rights Guide",
+        "description": "Legal rights and protections",
+        "url": "#",
+        "type": "Guide"
+      },
+      {
+        "title": "Legal Aid Organizations",
+        "description": "Free and low-cost legal services",
+        "url": "#",
+        "type": "Directory"
+      },
+      {
+        "title": "Family Law Resources",
+        "description": "Custody, adoption, and family legal matters",
+        "url": "#",
+        "type": "Legal"
+      }
+    ]
+  }
