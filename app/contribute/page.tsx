@@ -124,7 +124,7 @@ export default function ContributePage() {
 
               <div className="pt-4">
                 <Button asChild className="w-full md:w-auto">
-                  <a href="https://github.com/your-username/blk-nest" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/kayanhales/the-blk-nest" target="_blank" rel="noopener noreferrer">
                     View on GitHub
                   </a>
                 </Button>
