@@ -1,0 +1,30 @@
+[
+  {
+  "id": "ped-001",
+  "name": "Dr. Tisa Johnson-Hooper, MD",
+  "specialty": "Pediatrician",
+  "location": "Detroit, MI",
+  "website": "https://www.henryford.com/physician-directory/j/johnson-tisa",  
+  "phone": "(800) 436-7936", 
+  "email": "",  
+  "bio": "Dr. Tisa M. Johnson-Hooper has been practicing pediatrics for over 25 years. She is Senior Staff Physician and Medical Director for the CADD (Center for Autism and Developmental Disabilities) at Henry Ford Health, providing diagnostic and developmental disorder services. She earned her MD from Mayo Clinic in 1996. Informally known for serving Detroit families, especially in developmental pediatrics. ",
+  "languages": ["English"],
+  "acceptsInsurance": true,  
+  "rating": null,  
+  "image": "/tjh.jpg?height=200&width=200"
+},
+  {
+  "id": "ped-002",
+  "name": "Dr. Kumba Njie, MD",
+  "specialty": "Pediatrician",
+  "location": "400 Mack Avenue, Suite 9, Detroit, MI 48201",
+  "website": "https://www.waynepediatrics.org/our-team/dr-kumba-njie",
+  "phone": "(313) 448-9600",
+  "email": "",
+  "bio": "Dr. Njie is a board-certified pediatrician who provides health care to infants, children, and adolescents, from birth to 18 years of age. She treats common illnesses and conditions, monitors for patterns that may require additional evaluations, and recommends preventative vaccines and routine testing. She also partners with specialists to support the child’s overall care and makes referrals when appropriate, and utilizes telehealth to ensure her patient’s access to health care. Raised in The Gambia, West Africa, she enjoys spending time with family, movies, cooking, hiking, mountain climbing and adventurous outdoor activities.",
+  "languages": ["English"],
+  "acceptsInsurance": true,
+  "rating": null,
+  "image": "/Kumba_Njjie_001.png?height=200&width=200"
+}
+]

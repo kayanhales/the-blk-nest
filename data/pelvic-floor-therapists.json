@@ -1,0 +1,16 @@
+[
+  {
+    "id": "pft-001",
+    "name": "Dr. Kamaria Washington",
+    "specialty": "Pelvic Floor Therapist",
+    "location": "Oak Park, MI",
+    "website":"http://pelvicnoire.com",
+    "phone": "313-524-1544",
+    "email": "hello@pelvicnoire.com",
+    "bio": "Licensed physical therapist specializing in women's health and pelvic floor dysfunction. Culturally sensitive care for postpartum recovery.",
+    "languages": ["English"],
+    "acceptsInsurance": false,
+    "rating": 5,
+    "image": ""
+  }
+]
