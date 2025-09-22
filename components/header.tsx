@@ -37,16 +37,16 @@ export function Header() {
                 </Link>
               </div>
             </div>
-
+            <Link href="/resources" className="text-foreground hover:text-primary transition-colors">
+              Resources
+            </Link>
             <Link href="/contribute" className="text-foreground hover:text-primary transition-colors">
               Contribute
             </Link>
             <Link href="/feedback" className="text-foreground hover:text-primary transition-colors">
               Feedback
             </Link>
-            <Link href="/resources" className="text-foreground hover:text-primary transition-colors">
-              Resources
-            </Link>
+            
           </nav>
 
           <Button variant="outline" className="md:hidden bg-transparent">
