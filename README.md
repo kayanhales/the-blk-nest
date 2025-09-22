@@ -31,4 +31,13 @@ Want to add a provider or resource? See Contributing.MD
 
 ---
 
+## License & Use
+
+- **Code:** MIT License. You can freely use, modify, and contribute to the code.
+- **Curated Resources:** CC BY-NC 4.0. You may share and adapt for non-commercial purposes with proper attribution.
+
+All contributions are reviewed via Pull Requests before merging.
+
+---
+
 ## 🪹 The BLK Nest: *Our Village, Our Care, Our Future.*
