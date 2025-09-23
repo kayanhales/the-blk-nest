@@ -26,13 +26,38 @@ export function ContributionForm() {
 
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+  //const handleSubmit = (e: React.FormEvent) => {
+  //  e.preventDefault()
     // For MVP, we'll just show a success message
     // In production, this would send to a backend or email service
-    console.log("Provider submission:", formData)
-    setIsSubmitted(true)
-  }
+    //console.log("Provider submission:", formData)
+    const handleSubmit = async (e: React.FormEvent) => {
+      try {
+        const response = await fetch("/api/submit-resource", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          console.log("PR created successfully:", data.prUrl);
+          setIsSubmitted(true);
+        } else {
+          console.error("Failed to create PR:", data.error);
+          alert("Oops! Something went wrong. Please try again.");
+        }
+      } catch (err) {
+        console.error("Error submitting form:", err);
+        alert("Oops! Something went wrong. Please try again.");
+      }
+    };
+
+    //setIsSubmitted(true)
+  //}
 
   const handleChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }))
