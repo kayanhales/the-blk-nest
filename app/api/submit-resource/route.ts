@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
     const { data: repoData } = await octokit.repos.get({
       owner: OWNER,
       repo: REPO,
-    });
+    }); 
     const defaultBranch = repoData.default_branch;
 
     // 2️⃣ Create a new branch for this submission
