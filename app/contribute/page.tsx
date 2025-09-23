@@ -19,18 +19,34 @@ export default function ContributePage() {
         </div>
 
         <div className="mb-12">
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-border/50">
               <div className="flex items-center gap-3 mb-4">
                 <FileText className="h-6 w-6 text-primary" />
-                <h2 className="text-xl font-semibold text-foreground">Quick Submission</h2>
+                <h2 className="text-xl font-semibold text-foreground">Provider - Quick Submission</h2>
               </div>
               <p className="text-muted-foreground mb-4 text-pretty">
                 Use our form to quickly submit a provider. Perfect for non-technical users.
               </p>
               <Button
                 className="w-full"
-                onClick={() => document.getElementById("contribution-form")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.getElementById("provider-contribution-form")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Use Form Below
+              </Button>
+            </div>
+
+            <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-border/50">
+              <div className="flex items-center gap-3 mb-4">
+                <FileText className="h-6 w-6 text-primary" />
+                <h2 className="text-xl font-semibold text-foreground">Resource - Quick Submission</h2>
+              </div>
+              <p className="text-muted-foreground mb-4 text-pretty">
+                Use our form to quickly submit a resource. Perfect for non-technical users.
+              </p>
+              <Button
+                className="w-full"
+                onClick={() => document.getElementById("resource-contribution-form")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Use Form Below
               </Button>
@@ -51,7 +67,11 @@ export default function ContributePage() {
           </div>
         </div>
 
-        <div id="contribution-form">
+        <div id="provider-contribution-form">
+          <ContributionForm />
+        </div>
+
+        <div id="resource-contribution-form">
           <ContributionForm />
         </div>
 

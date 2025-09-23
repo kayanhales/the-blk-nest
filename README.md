@@ -20,7 +20,7 @@ Every submission helps another family. Every resource shared strengthens the com
 
 ## 🤝 How to Contribute
 
-Want to add a provider or resource? See Contributing.MD
+Want to add a provider or resource? See [how to contribute here.](/CONTRIBUTING.md)
 
 ---
 
