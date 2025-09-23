@@ -10,6 +10,8 @@ if (!GITHUB_PAT || !GITHUB_USERNAME || !REPO_NAME) {
 }
 
 const octokit = new Octokit({ auth: GITHUB_PAT });
+const OWNER = GITHUB_USERNAME;
+const REPO = REPO_NAME;
 
 export async function POST(req: NextRequest) {
   try {
@@ -17,22 +19,22 @@ export async function POST(req: NextRequest) {
 
     // 1️⃣ Get the default branch
     const { data: repoData } = await octokit.repos.get({
-      owner: GITHUB_USERNAME,
-      repo: REPO_NAME,
+      owner: OWNER,
+      repo: REPO,
     });
     const defaultBranch = repoData.default_branch;
 
     // 2️⃣ Create a new branch for this submission
     const branchName = `submission-${Date.now()}`;
     const { data: refData } = await octokit.git.getRef({
-      owner: GITHUB_USERNAME,
-      repo: REPO_NAME,
+      owner: OWNER,
+      repo: REPO,
       ref: `heads/${defaultBranch}`,
     });
 
     await octokit.git.createRef({
-      owner: GITHUB_USERNAME,
-      repo: REPO_NAME,
+      owner: OWNER,
+      repo: REPO,
       ref: `refs/heads/${branchName}`,
       sha: refData.object.sha,
     });
@@ -42,8 +44,8 @@ export async function POST(req: NextRequest) {
     const content = Buffer.from(JSON.stringify(submission, null, 2)).toString("base64");
 
     await octokit.repos.createOrUpdateFileContents({
-      owner: GITHUB_USERNAME,
-      repo: REPO_NAME,
+      owner: OWNER,
+      repo: REPO,
       path: fileName,
       message: `Add new resource submission: ${submission.title || "Untitled"}`,
       content,
@@ -52,8 +54,8 @@ export async function POST(req: NextRequest) {
 
     // 4️⃣ Open a Pull Request
     const pr = await octokit.pulls.create({
-      owner: GITHUB_USERNAME,
-      repo: REPO_NAME,
+      owner: OWNER,
+      repo: REPO,
       title: `New Resource Submission: ${submission.title || "Untitled"}`,
       head: branchName,
       base: defaultBranch,
