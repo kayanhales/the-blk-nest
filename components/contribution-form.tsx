@@ -32,6 +32,7 @@ export function ContributionForm() {
     // In production, this would send to a backend or email service
     //console.log("Provider submission:", formData)
     const handleSubmit = async (e: React.FormEvent) => {
+      e.preventDefault();
       try {
         const response = await fetch("/api/submit-resource", {
           method: "POST",
