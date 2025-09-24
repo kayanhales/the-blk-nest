@@ -12,16 +12,14 @@ if (!GITHUB_PAT || !GITHUB_USERNAME || !REPO_NAME) {
 const octokit = new Octokit({ auth: GITHUB_PAT });
 const OWNER = GITHUB_USERNAME;
 const REPO = REPO_NAME;
+const FILE_PATH = "data/providers.json"; // path to your JSON file
 
 export async function POST(req: NextRequest) {
   try {
     const submission = await req.json();
 
-    // 1️⃣ Get the default branch
-    const { data: repoData } = await octokit.repos.get({
-      owner: OWNER,
-      repo: REPO,
-    });
+    // 1️⃣ Get default branch
+    const { data: repoData } = await octokit.repos.get({ owner: OWNER, repo: REPO });
     const defaultBranch = repoData.default_branch;
 
     // 2️⃣ Create a new branch for this submission
@@ -39,27 +37,47 @@ export async function POST(req: NextRequest) {
       sha: refData.object.sha,
     });
 
-    // 3️⃣ Add the new resource as a JSON file
-    const fileName = `submissions/${branchName}.json`;
-    const content = Buffer.from(JSON.stringify(submission, null, 2)).toString("base64");
+    // 3️⃣ Get existing JSON file
+    const { data: fileData } = await octokit.repos.getContent({
+      owner: OWNER,
+      repo: REPO,
+      path: FILE_PATH,
+      ref: defaultBranch,
+    });
 
+    // Type guard to ensure we have a file
+    if (!("content" in fileData)) {
+      throw new Error("Expected a single file, but got a directory, symlink, or submodule.");
+    }
+
+    const existingContent = fileData.content;
+    const fileSha = fileData.sha;
+
+    // Decode existing content and append new submission
+    const currentData = JSON.parse(Buffer.from(existingContent, "base64").toString("utf-8"));
+    currentData.push(submission);
+
+    const updatedContent = Buffer.from(JSON.stringify(currentData, null, 2)).toString("base64");
+
+    // 4️⃣ Update the file on the new branch
     await octokit.repos.createOrUpdateFileContents({
       owner: OWNER,
       repo: REPO,
-      path: fileName,
-      message: `Add new resource submission: ${submission.title || "Untitled"}`,
-      content,
+      path: FILE_PATH,
+      message: `Add new provider: ${submission.name || "Untitled"}`,
+      content: updatedContent,
       branch: branchName,
+      sha: fileSha,
     });
 
-    // 4️⃣ Open a Pull Request
+    // 5️⃣ Open a Pull Request
     const pr = await octokit.pulls.create({
       owner: OWNER,
       repo: REPO,
-      title: `New Resource Submission: ${submission.title || "Untitled"}`,
+      title: `New Provider Submission: ${submission.name || "Untitled"}`,
       head: branchName,
       base: defaultBranch,
-      body: `A new resource was submitted:\n\n${JSON.stringify(submission, null, 2)}`,
+      body: `${JSON.stringify(submission, null, 2)}`,
     });
 
     return NextResponse.json({ message: "PR created successfully", prUrl: pr.data.html_url });
