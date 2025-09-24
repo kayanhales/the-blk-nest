@@ -12,18 +12,30 @@ if (!GITHUB_PAT || !GITHUB_USERNAME || !REPO_NAME) {
 const octokit = new Octokit({ auth: GITHUB_PAT });
 const OWNER = GITHUB_USERNAME;
 const REPO = REPO_NAME;
-const FILE_PATH = "data/providers.json"; // path to your JSON file
+
+// Map provider types to their JSON file paths
+const PROVIDER_FILE_MAP: Record<string, string> = {
+  nanny: "data/providers/nannies.json",
+  pediatrician: "data/providers/pediatricians.json",
+  "pelvic-floor-therapist": "data/providers/pelvic-floor-therapists.json",
+};
 
 export async function POST(req: NextRequest) {
   try {
     const submission = await req.json();
+
+    if (!submission.providerType || !PROVIDER_FILE_MAP[submission.providerType]) {
+      throw new Error("Invalid or missing provider type");
+    }
+
+    const FILE_PATH = PROVIDER_FILE_MAP[submission.providerType];
 
     // 1️⃣ Get default branch
     const { data: repoData } = await octokit.repos.get({ owner: OWNER, repo: REPO });
     const defaultBranch = repoData.default_branch;
 
     // 2️⃣ Create a new branch for this submission
-    const branchName = `submission-${Date.now()}`;
+    const branchName = `submission-${submission.providerType}-${Date.now()}`;
     const { data: refData } = await octokit.git.getRef({
       owner: OWNER,
       repo: REPO,
@@ -64,7 +76,7 @@ export async function POST(req: NextRequest) {
       owner: OWNER,
       repo: REPO,
       path: FILE_PATH,
-      message: `Add new provider: ${submission.name || "Untitled"}`,
+      message: `Add new ${submission.providerType}: ${submission.name || "Untitled"}`,
       content: updatedContent,
       branch: branchName,
       sha: fileSha,
@@ -74,15 +86,15 @@ export async function POST(req: NextRequest) {
     const pr = await octokit.pulls.create({
       owner: OWNER,
       repo: REPO,
-      title: `New Provider Submission: ${submission.name || "Untitled"}`,
+      title: `New ${submission.providerType} Submission: ${submission.name || "Untitled"}`,
       head: branchName,
       base: defaultBranch,
       body: `${JSON.stringify(submission, null, 2)}`,
     });
 
     return NextResponse.json({ message: "PR created successfully", prUrl: pr.data.html_url });
-  } catch (err) {
-    console.error(err);
-    return NextResponse.json({ error: "Failed to create PR" }, { status: 500 });
+  } catch (err: any) {
+    console.error("Error creating PR:", err);
+    return NextResponse.json({ error: err.message || "Failed to create PR" }, { status: 500 });
   }
 }
