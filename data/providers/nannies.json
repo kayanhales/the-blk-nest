@@ -48,41 +48,5 @@
     "acceptsInsurance": false,
     "rating": 4.9,
     "image": ""
-  },
-  {
-    "providerType": "nanny",
-    "name": "olivia j",
-    "specialty": "babysitter",
-    "location": "detroit, mi",
-    "phone": "3453334455",
-    "email": "olivia@gmail.com",
-    "website": "http://olivia.com",
-    "bio": "College grad. 5yrs experience",
-    "submitterName": "Kayan",
-    "submitterEmail": "kayanhales@gmail.com",
-    "languages": [
-      "English"
-    ],
-    "acceptsInsurance": false,
-    "rating": 4.9,
-    "image": ""
-  },
-  {
-    "providerType": "nanny",
-    "name": "DaynaLee Ewin",
-    "specialty": "Babysitting",
-    "location": "Detroit, MI",
-    "phone": "3333333333",
-    "email": "dayna@gmail.com",
-    "website": "",
-    "bio": "Fun kid loving nanny with 10 years experience",
-    "languages": [
-      "English"
-    ],
-    "acceptsInsurance": false,
-    "rating": "",
-    "image": "",
-    "submitterName": "Kayan",
-    "submitterEmail": "kayanhales@gmail.com"
   }
 ]

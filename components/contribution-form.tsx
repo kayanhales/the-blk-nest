@@ -35,8 +35,12 @@ export function ContributionForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
+      const randomNum = Math.floor(Math.random() * 10000)
+      const id = `${formData.providerType || "provider"}-${randomNum}`
+      
       // Convert languages to array before sending
       const submission = {
+        id,
         ...formData,
         languages: formData.languages.split(",").map((lang) => lang.trim()),
         acceptsInsurance: formData.acceptsInsurance === "yes",
@@ -119,12 +123,13 @@ export function ContributionForm() {
                 />
               </div>
               <div>
-                <Label htmlFor="specialty">Specialty</Label>
+                <Label htmlFor="specialty">Specialty *</Label>
                 <Input
                   id="specialty"
                   value={formData.specialty}
                   onChange={(e) => handleChange("specialty", e.target.value)}
                   placeholder="e.g., Newborn care, ADHD specialist"
+                  required
                 />
               </div>
             </div>
@@ -175,23 +180,25 @@ export function ContributionForm() {
             </div>
 
             <div>
-              <Label htmlFor="bio">Bio</Label>
+              <Label htmlFor="bio">Bio *</Label>
               <Textarea
                 id="bio"
                 value={formData.bio}
                 onChange={(e) => handleChange("bio", e.target.value)}
                 placeholder="Tell us about this provider's services, approach, or what makes them special..."
                 rows={4}
+                required
               />
             </div>
 
             <div>
-              <Label htmlFor="languages">Languages</Label>
+              <Label htmlFor="languages">Languages *</Label>
               <Input
                 id="languages"
                 value={formData.languages}
                 onChange={(e) => handleChange("languages", e.target.value)}
                 placeholder="e.g., English, Spanish"
+                required
               />
             </div>
 
@@ -235,27 +242,25 @@ export function ContributionForm() {
           </div>
 
           <div className="border-t pt-6 space-y-4">
-            <h3 className="text-lg font-semibold text-foreground">Your Information</h3>
+            <h3 className="text-lg font-semibold text-foreground">Your Information (Optional)</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <Label htmlFor="submitterName">Your Name *</Label>
+                <Label htmlFor="submitterName">Your Name</Label>
                 <Input
                   id="submitterName"
                   value={formData.submitterName}
                   onChange={(e) => handleChange("submitterName", e.target.value)}
                   placeholder="Your name"
-                  required
                 />
               </div>
               <div>
-                <Label htmlFor="submitterEmail">Your Email *</Label>
+                <Label htmlFor="submitterEmail">Your Email</Label>
                 <Input
                   id="submitterEmail"
                   type="email"
                   value={formData.submitterEmail}
                   onChange={(e) => handleChange("submitterEmail", e.target.value)}
                   placeholder="your@email.com"
-                  required
                 />
               </div>
             </div>
