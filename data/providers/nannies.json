@@ -57,8 +57,14 @@
     "phone": "3453334455",
     "email": "olivia@gmail.com",
     "website": "http://olivia.com",
-    "description": "College grad. 5yrs experience",
+    "bio": "College grad. 5yrs experience",
     "submitterName": "Kayan",
-    "submitterEmail": "kayanhales@gmail.com"
+    "submitterEmail": "kayanhales@gmail.com",
+    "languages": [
+      "English"
+    ],
+    "acceptsInsurance": false,
+    "rating": 4.9,
+    "image": ""
   }
 ]

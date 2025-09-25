@@ -1,7 +1,5 @@
 "use client"
 
-import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -19,49 +17,50 @@ export function ContributionForm() {
     phone: "",
     email: "",
     website: "",
-    description: "",
+    bio: "",
+    languages: "",
+    acceptsInsurance: "", // "yes" | "no"
+    rating: "",
+    image: "",
     submitterName: "",
     submitterEmail: "",
   })
 
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  //const handleSubmit = (e: React.FormEvent) => {
-  //  e.preventDefault()
-    // For MVP, we'll just show a success message
-    // In production, this would send to a backend or email service
-    //console.log("Provider submission:", formData)
-    const handleSubmit = async (e: React.FormEvent) => {
-      e.preventDefault();
-      try {
-        const response = await fetch("/api/submit-resource", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-          console.log("PR created successfully:", data.prUrl);
-          setIsSubmitted(true);
-        } else {
-          console.error("Failed to create PR:", data.error);
-          alert("Oops! Something went wrong. Please try again.");
-        }
-      } catch (err) {
-        console.error("Error submitting form:", err);
-        alert("Oops! Something went wrong. Please try again.");
-      }
-    };
-
-    //setIsSubmitted(true)
-  //}
-
   const handleChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    try {
+      // Convert languages to array before sending
+      const submission = {
+        ...formData,
+        languages: formData.languages.split(",").map((lang) => lang.trim()),
+        acceptsInsurance: formData.acceptsInsurance === "yes",
+      }
+
+      const response = await fetch("/api/submit-resource", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(submission),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        console.log("PR created successfully:", data.prUrl)
+        setIsSubmitted(true)
+      } else {
+        console.error("Failed to create PR:", data.error)
+        alert("Oops! Something went wrong. Please try again.")
+      }
+    } catch (err) {
+      console.error("Error submitting form:", err)
+      alert("Oops! Something went wrong. Please try again.")
+    }
   }
 
   if (isSubmitted) {
@@ -93,7 +92,10 @@ export function ContributionForm() {
           <div className="space-y-4">
             <div>
               <Label htmlFor="providerType">Provider Type *</Label>
-              <Select value={formData.providerType} onValueChange={(value) => handleChange("providerType", value)}>
+              <Select
+                value={formData.providerType}
+                onValueChange={(value) => handleChange("providerType", value)}
+              >
                 <SelectTrigger>
                   <SelectValue placeholder="Select provider type" />
                 </SelectTrigger>
@@ -173,13 +175,61 @@ export function ContributionForm() {
             </div>
 
             <div>
-              <Label htmlFor="description">Description</Label>
+              <Label htmlFor="bio">Bio</Label>
               <Textarea
-                id="description"
-                value={formData.description}
-                onChange={(e) => handleChange("description", e.target.value)}
+                id="bio"
+                value={formData.bio}
+                onChange={(e) => handleChange("bio", e.target.value)}
                 placeholder="Tell us about this provider's services, approach, or what makes them special..."
                 rows={4}
+              />
+            </div>
+
+            <div>
+              <Label htmlFor="languages">Languages</Label>
+              <Input
+                id="languages"
+                value={formData.languages}
+                onChange={(e) => handleChange("languages", e.target.value)}
+                placeholder="e.g., English, Spanish"
+              />
+            </div>
+
+            <div>
+              <Label htmlFor="acceptsInsurance">Accepts Insurance?</Label>
+              <Select
+                value={formData.acceptsInsurance}
+                onValueChange={(value) => handleChange("acceptsInsurance", value)}
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Select an option" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="yes">Yes</SelectItem>
+                  <SelectItem value="no">No</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div>
+              <Label htmlFor="rating">Rating</Label>
+              <Input
+                id="rating"
+                type="number"
+                value={formData.rating}
+                onChange={(e) => handleChange("rating", e.target.value)}
+                placeholder="4.5"
+              />
+            </div>
+
+            <div>
+              <Label htmlFor="image">Link to Picture</Label>
+              <Input
+                id="image"
+                type="url"
+                value={formData.image}
+                onChange={(e) => handleChange("image", e.target.value)}
+                placeholder="https://www.example.com"
               />
             </div>
           </div>
