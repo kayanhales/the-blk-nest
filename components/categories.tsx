@@ -1,4 +1,4 @@
-import { Heart, Users, Shield } from "lucide-react"
+import { Heart, Users, Shield, Baby } from "lucide-react"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 
@@ -24,10 +24,10 @@ export function Categories() {
               </div>
             </Link>
 
-            <Link href="/nannies" className="group">
+            <Link href="/doulas" className="group">
               <div className="bg-card border border-border rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300 hover:border-secondary/50">
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary/20 transition-colors">
-                  <Users className="w-8 h-8 text-secondary" />
+                  <Baby className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Doulas</h3>
                 <p className="text-muted-foreground mb-4">Experienced  birth doulas for mom.</p>

@@ -105,7 +105,7 @@ export function ContributionForm() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="pediatrician">Pediatrician</SelectItem>
-                  <SelectItem value="doula">Doula</SelectItem>
+                  <SelectItem value="Doula">Doula</SelectItem>
                   <SelectItem value="pelvic-floor-therapist">Pelvic Floor Therapist</SelectItem>
                   <SelectItem value="other">Other - describe in bio</SelectItem>
                 </SelectContent>
