@@ -1,0 +1,19 @@
+[
+  {
+    "id": "doul-001",
+    "providerType": "Doula",
+    "name": "India Jones",
+    "specialty": "Birth Doula",
+    "location": "Detroit, MI",
+    "website": "feedthebabes.com",
+    "phone": "",
+    "email": "india@feedthebabes.com",
+    "bio": "Experienced birth doula with 10+ years experience",
+    "languages": [
+      "English"
+    ],
+    "acceptsInsurance": true,
+    "rating": 5,
+    "image": ""
+  }
+]

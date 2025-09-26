@@ -1,5 +1,5 @@
 import pediatricians from "@/data/providers/pediatricians.json"
-import nannies from "@/data/providers/nannies.json"
+import doulas from "@/data/providers/doulas.json"
 import pelvicFloorTherapists from "@/data/providers/pelvic-floor-therapists.json"
 
 export interface Provider {
@@ -19,15 +19,15 @@ export interface Provider {
 }
 
 export const getAllProviders = (): Provider[] => {
-  return [...pediatricians, ...nannies, ...pelvicFloorTherapists]
+  return [...pediatricians, ...doulas, ...pelvicFloorTherapists]
 }
 
 export const getPediatricians = (): Provider[] => {
   return pediatricians
 }
 
-export const getNannies = (): Provider[] => {
-  return nannies
+export const getDoulas = (): Provider[] => {
+  return doulas
 }
 
 export const getPelvicFloorTherapists = (): Provider[] => {

@@ -48,7 +48,7 @@ export function SearchBar({ onSearch, placeholder = "Search providers, services,
           <SelectContent>
             <SelectItem value="all">All Specialties</SelectItem>
             <SelectItem value="pediatrician">Pediatricians</SelectItem>
-            <SelectItem value="nanny">Nannies</SelectItem>
+            <SelectItem value="doula">Doulas</SelectItem>
             <SelectItem value="pelvic floor therapist">Pelvic Floor Therapists</SelectItem>
           </SelectContent>
         </Select>

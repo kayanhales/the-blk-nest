@@ -29,9 +29,9 @@ export function Categories() {
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary/20 transition-colors">
                   <Users className="w-8 h-8 text-secondary" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Nannies</h3>
-                <p className="text-muted-foreground mb-4">Experienced childcare providers for your family</p>
-                <Badge variant="secondary">3+ providers</Badge>
+                <h3 className="text-xl font-bold mb-2">Doulas</h3>
+                <p className="text-muted-foreground mb-4">Experienced  birth doulas for mom.</p>
+                <Badge variant="secondary">1+ providers</Badge>
               </div>
             </Link>
 
