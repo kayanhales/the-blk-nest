@@ -29,8 +29,8 @@ export function Header() {
                 <Link href="/pediatricians" className="block px-4 py-2 hover:bg-muted">
                   Pediatricians
                 </Link>
-                <Link href="/nannies" className="block px-4 py-2 hover:bg-muted">
-                  Nannies
+                <Link href="/doulas" className="block px-4 py-2 hover:bg-muted">
+                  Doulas
                 </Link>
                 <Link href="/pelvic-floor-therapists" className="block px-4 py-2 hover:bg-muted">
                   Pelvic Floor Therapists
