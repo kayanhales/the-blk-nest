@@ -16,9 +16,9 @@ export function Header() {
             <div className="relative group">
               <Button
                 variant="ghost"
-                className="text-foreground hover:bg-muted hover:text-primary transition-colors text-md"
+                className="text-foreground hover:text-primary transition-colors text-md"
               >
-                All Providers
+                Providers
               </Button>
 
               {/* Dropdown appears on hover */}
