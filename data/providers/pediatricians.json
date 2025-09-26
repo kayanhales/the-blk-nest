@@ -1,6 +1,7 @@
 [
   {
   "id": "ped-001",
+  "providerType": "Pediatrician",
   "name": "Dr. Tisa Johnson-Hooper, MD",
   "specialty": "Pediatrician",
   "location": "Detroit, MI",
@@ -15,6 +16,7 @@
 },
   {
   "id": "ped-002",
+  "providerType": "Pediatrician",
   "name": "Dr. Kumba Njie, MD",
   "specialty": "Pediatrician",
   "location": "400 Mack Avenue, Suite 9, Detroit, MI 48201",

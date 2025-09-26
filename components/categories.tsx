@@ -20,7 +20,7 @@ export function Categories() {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Pediatricians</h3>
                 <p className="text-muted-foreground mb-4">Board-certified doctors specializing in children's health</p>
-                <Badge variant="secondary">3+ providers</Badge>
+                <Badge variant="secondary">2+ providers</Badge>
               </div>
             </Link>
 
@@ -42,7 +42,7 @@ export function Categories() {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Pelvic Floor Therapists</h3>
                 <p className="text-muted-foreground mb-4">Specialized care for women's health and recovery</p>
-                <Badge variant="secondary">3+ providers</Badge>
+                <Badge variant="secondary">1+ providers</Badge>
               </div>
             </Link>
           </div>

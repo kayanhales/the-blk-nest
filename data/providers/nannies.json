@@ -1,6 +1,7 @@
 [
   {
     "id": "nan-001",
+    "providerType": "Nanny",
     "name": "Zara Mitchell",
     "specialty": "Nanny",
     "location": "Brooklyn, NY",
@@ -15,57 +16,5 @@
     "acceptsInsurance": false,
     "rating": 4.9,
     "image": ""
-  },
-  {
-    "id": "nan-002",
-    "name": "Jasmine Davis",
-    "specialty": "Nanny",
-    "location": "Los Angeles, CA",
-    "website": "pelvicnoire.com",
-    "phone": "(323) 555-0567",
-    "email": "jasmine.davis@example.com",
-    "bio": "Nurturing childcare provider specializing in newborn care and sleep training. Background in child development and Montessori education.",
-    "languages": [
-      "English",
-      "Spanish"
-    ],
-    "acceptsInsurance": false,
-    "rating": 4.8,
-    "image": ""
-  },
-  {
-    "id": "nan-003",
-    "name": "Nia Washington",
-    "specialty": "Nanny",
-    "location": "Washington, DC",
-    "website": "pelvicnoire.com",
-    "phone": "(202) 555-0890",
-    "email": "nia.washington@example.com",
-    "bio": "Creative and energetic nanny with expertise in arts and crafts, outdoor activities, and homework assistance for school-age children.",
-    "languages": [
-      "English"
-    ],
-    "acceptsInsurance": false,
-    "rating": 4.9,
-    "image": ""
-  },
-  {
-    "id": "nanny-3515",
-    "providerType": "nanny",
-    "name": "Jade Garden",
-    "specialty": "Newborn Care",
-    "location": "Oak Park, MI",
-    "phone": "5551232345",
-    "email": "provider@example.com",
-    "website": "https://example.com",
-    "bio": "A wonderful caring nanny.",
-    "languages": [
-      "Spanish"
-    ],
-    "acceptsInsurance": false,
-    "rating": "",
-    "image": "",
-    "submitterName": "",
-    "submitterEmail": ""
   }
 ]

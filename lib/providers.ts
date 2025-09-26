@@ -4,6 +4,7 @@ import pelvicFloorTherapists from "@/data/providers/pelvic-floor-therapists.json
 
 export interface Provider {
   id: string
+  providerType: string
   name: string
   specialty: string
   location: string
