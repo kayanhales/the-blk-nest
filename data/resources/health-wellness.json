@@ -1,25 +1,91 @@
 {
-    "title": "Health & Wellness",
-    "icon": "Heart",
-    "color": "text-red-500",
-    "resources": [
-      {
-        "title": "Black Maternal Health Alliance",
-        "description": "Resources and advocacy for Black maternal health",
-        "url": "https://blackmaternalhealthalliance.org",
-        "type": "Organization"
-      },
-      {
-        "title": "Mental Health Resources for Black Families",
-        "description": "Culturally competent mental health support",
-        "url": "#",
-        "type": "Guide"
-      },
-      {
-        "title": "Sickle Cell Disease Association",
-        "description": "Support and resources for sickle cell disease",
-        "url": "#",
-        "type": "Organization"
-      }
-    ]
-  }
+  "title": "Health & Wellness — Metro + National",
+  "icon": "Heart",
+  "color": "text-red-500",
+  "resources": [
+    { 
+      "title": "Pelvic Noire Physical Therapy & Wellness",
+      "description": "Led by Dr. Kamaria 'Dr. K' Washington, this clinic offers pelvic floor therapy, women's health coaching, and holistic wellness services. Virtual appointments available worldwide.",
+      "url": "https://www.pelvicnoire.com/",
+      "type": "Organization"
+    },
+    {
+      "title": "Black Maternal Health Alliance",
+      "description": "Resources and advocacy for Black maternal health",
+      "url": "https://blackmaternalhealthalliance.org",
+      "type": "Organization"
+    },
+    {
+      "title": "Sickle Cell Disease Association of America (SCDAA)",
+      "description": "National advocacy, support, and education for sickle cell disease",
+      "url": "https://www.sicklecelldisease.org/",
+      "type": "Organization"
+    },
+    {
+      "title": "Black Emotional and Mental Health Collective (BEAM)",
+      "description": "Healing justice org removing barriers to Black mental health care",
+      "url": "https://beam.community/",
+      "type": "Organization"
+    },
+    {
+      "title": "Black Mental Health Alliance",
+      "description": "Culturally relevant mental health education & referral services",
+      "url": "https://blackmentalhealthalliance.org/",
+      "type": "Organization"
+    },
+    {
+      "title": "NAMI — Black / African American Mental Health",
+      "description": "Support, education & advocacy recognizing cultural dimensions of mental health",
+      "url": "https://www.nami.org/your-journey/identity-and-cultural-dimensions/black-african-american/",
+      "type": "Organization"
+    },
+    {
+      "title": "Vibrant — Supporting Black Mental Health",
+      "description": "Resource hub with community resources, therapy support, education",
+      "url": "https://www.vibrant.org/supporting-black-mental-health/",
+      "type": "Guide"
+    },
+    {
+      "title": "Altus Home Counseling (Michigan / Detroit)",
+      "description": "Mental health counseling in Detroit & Michigan with Black / BIPOC therapists",
+      "url": "https://www.altuswellbeing.com/",
+      "type": "Organization"
+    },
+    {
+      "title": "Introspective Counseling LLC",
+      "description": "Therapy for individuals, couples, and groups in Detroit metro area",
+      "url": "https://introspectivecounselingllc.com/",
+      "type": "Organization"
+    },
+    {
+      "title": "Birth Detroit (midwifery-led birth center)",
+      "description": "Black-led freestanding birth center offering prenatal, postpartum, classes & care",
+      "url": "https://www.birthdetroit.com/",
+      "type": "Organization"
+    },
+    {
+      "title": "Mothering Justice — MI Maternal Health",
+      "description": "MI-based, Black-led maternal health advocacy & fact sheets",
+      "url": "https://www.motheringjustice.org/reproductivejustice",
+      "type": "Guide"
+    },
+    {
+      "title": "Detroit Black Community Food Security Network (DBCFSN)",
+      "description": "Community food sovereignty & wellness in Detroit neighborhoods",
+      "url": "https://www.dbcfsn.org/",
+      "type": "Community"
+    },
+    {
+      "title": "SASHA Center (Detroit, Black women's healing space)",
+      "description": "Culturally relevant healing & mental health programs centering Black women",
+      "url": "https://www.sashacenter.org/",
+      "type": "Organization"
+    },
+    {
+      "title": "Radical Well-Being Center",
+      "description": "Therapy, energy work, wellness programs with a social justice lens",
+      "url": "https://radicalwellbeingcenter.com/",
+      "type": "Organization"
+    }
+  ]
+}

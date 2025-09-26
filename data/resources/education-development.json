@@ -1,25 +1,85 @@
 {
-    "title": "Education & Development",
-    "icon": "GraduationCap",
-    "color": "text-blue-500",
-    "resources": [
-      {
-        "title": "Black History Curriculum Resources",
-        "description": "Age-appropriate Black history learning materials",
-        "url": "#",
-        "type": "Educational"
-      },
-      {
-        "title": "STEM Programs for Black Youth",
-        "description": "Science and technology programs",
-        "url": "#",
-        "type": "Programs"
-      },
-      {
-        "title": "College Prep for Black Students",
-        "description": "Scholarship and college readiness resources",
-        "url": "#",
-        "type": "Guide"
-      }
-    ]
-  }
+  "title": "Education & Development — Metro + National",
+  "icon": "GraduationCap",
+  "color": "text-blue-500",
+  "resources": [
+    {
+      "title": "Black History Month Lesson Plans (NEA)",
+      "description": "Lesson plans and resources for teaching Black history across grade levels",
+      "url": "https://www.nea.org/professional-excellence/student-engagement/tools-tips/black-history-month-lessons-resources",
+      "type": "Educational"
+    },
+    {
+      "title": "Black History Curriculum Resources (Center for Racial Justice in Education)",
+      "description": "Resource guide for educators and families with themes and lesson ideas",
+      "url": "https://centerracialjustice.org/resources/black-history-month-resource-guide-for-educators-and-families/",
+      "type": "Guide"
+    },
+    {
+      "title": "Urban League: Black Scholars Program",
+      "description": "College readiness, academic recognition, and mentorship for Black high schoolers",
+      "url": "https://www.urbanleagueroc.org/blackscholars",
+      "type": "Programs"
+    },
+    {
+      "title": "UNCF Scholarships for Black Students",
+      "description": "Scholarship database for minority students, especially Black students",
+      "url": "https://uncf.org/scholarships",
+      "type": "Educational"
+    },
+    {
+      "title": "Black Student Fund",
+      "description": "Programs promoting academic excellence, test prep, and college readiness",
+      "url": "https://www.blackstudentfund.org/",
+      "type": "Programs"
+    },
+    {
+      "title": "Facing History: Classroom Resources on Black History",
+      "description": "Curated list of classroom resource ideas for Black history & life",
+      "url": "https://www.facinghistory.org/ideas-week/15-classroom-resources-black-history-life",
+      "type": "Educational"
+    },
+    {
+      "title": "PBS: Classroom Resources for Black History Month",
+      "description": "Lesson plans & interactive resources relating to Black history",
+      "url": "https://www.pbs.org/newshour/classroom/posts/2025/01/black-history-month-resources-for-the-classroom",
+      "type": "Guide"
+    },
+    {
+      "title": "SVSF Center — Free Tutoring / After School Programs",
+      "description": "Free tutoring and after school education support in Detroit",
+      "url": "https://www.svsfcenter.org/programs/childrens-after-school/",
+      "type": "Programs"
+    },
+    {
+      "title": "BUF E.Y.E.S. Initiative (Black United Fund of Michigan)",
+      "description": "Extended learning & youth support (reading, math, college prep)",
+      "url": "https://www.bufmi.org/buf-sponsored-programs",
+      "type": "Programs"
+    },
+    {
+      "title": "100 Black Men of Greater Detroit — Project Success",
+      "description": "Mentorship, leadership & academic enrichment for Black boys in Detroit",
+      "url": "https://www.100blackmendetroit.org/",
+      "type": "Mentorship"
+    },
+    {
+      "title": "Brainspring Tutoring (Metro Detroit locations)",
+      "description": "One-on-one multisensory literacy and tutoring centers in Metro Detroit",
+      "url": "https://brainspring.com/locations/",
+      "type": "Programs"
+    },
+    {
+      "title": "Detroit Fellows Tutoring Project (Wayne State)",
+      "description": "Wayne State’s K-2 reading tutoring initiative run by students",
+      "url": "https://honors.wayne.edu/academics/detroit-fellows",
+      "type": "Programs"
+    },
+    {
+      "title": "Math4Success Tutoring & STEM (Detroit, MI)",
+      "description": "Math tutoring, workshops & STEM programs for students in Metro Detroit",
+      "url": "https://www.math4success.org/",
+      "type": "Programs"
+    }
+  ]
+}

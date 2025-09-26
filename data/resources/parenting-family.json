@@ -1,25 +1,61 @@
 {
-    "title": "Parenting & Family",
-    "icon": "Baby",
-    "color": "text-pink-500",
-    "resources": [
-      {
-        "title": "Positive Discipline Techniques",
-        "description": "Culturally affirming parenting approaches",
-        "url": "#",
-        "type": "Guide"
-      },
-      {
-        "title": "Talking to Kids About Race",
-        "description": "Age-appropriate conversations about identity",
-        "url": "#",
-        "type": "Educational"
-      },
-      {
-        "title": "Single Parent Support Groups",
-        "description": "Community support for single parents",
-        "url": "#",
-        "type": "Support"
-      }
-    ]
-  }
+  "title": "Parenting & Family — Metro + National",
+  "icon": "Baby",
+  "color": "text-pink-500",
+  "resources": [
+    {
+      "title": "Positive Discipline Techniques",
+      "description": "Culturally affirming parenting approaches for Black families, including non-punitive strategies and guidance on fostering emotional intelligence.",
+      "url": "https://www.positivediscipline.com/",
+      "type": "Guide"
+    },
+    {
+      "title": "Talking to Kids About Race",
+      "description": "Age-appropriate guidance on having conversations about identity, racism, and social justice with children.",
+      "url": "https://www.tolerance.org/classroom-resources/talking-to-kids-about-race",
+      "type": "Educational"
+    },
+    {
+      "title": "Single Parent Support Groups (Metro Detroit)",
+      "description": "Local organizations offering support, resources, and community connections for single parents.",
+      "url": "https://www.211.org/services/family-support-single-parents",
+      "type": "Support"
+    },
+    {
+      "title": "The Village Parent Network",
+      "description": "Community network in Metro Detroit connecting parents for support, childcare co-ops, and social events.",
+      "url": "https://www.facebook.com/TheVillageParentNetworkDetroit",
+      "type": "Community"
+    },
+    {
+      "title": "Postpartum Support International (PSI)",
+      "description": "National organization offering free peer support, local support groups, and resources for new parents navigating postpartum mood and anxiety disorders.",
+      "url": "https://www.postpartum.net/",
+      "type": "Support"
+    },
+    {
+      "title": "The BLK Nest Parenting Resources",
+      "description": "Curated resources, workshops, and community events for Black parents in Metro Detroit, focusing on holistic family wellness.",
+      "url": "https://theblknest.com/resources",
+      "type": "Directory"
+    },
+    {
+      "title": "Detroit Parent Network",
+      "description": "Offers family-focused programs, parenting classes, and support groups throughout Detroit and surrounding areas.",
+      "url": "https://detroitparentnetwork.org/",
+      "type": "Organization"
+    },
+    {
+      "title": "Family Resource Center – Wayne County",
+      "description": "Provides parenting workshops, counseling, and family support services in Metro Detroit.",
+      "url": "https://www.waynecounty.com/departments/family-services/family-resource-center.aspx",
+      "type": "Organization"
+    },
+    {
+      "title": "Hands-On Detroit – Family Programs",
+      "description": "Community-driven initiatives and volunteer programs for families to engage in activities supporting children’s growth and family well-being.",
+      "url": "https://handsondetroit.org/programs/family-programs/",
+      "type": "Programs"
+    }
+  ]
+}

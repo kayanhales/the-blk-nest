@@ -1,25 +1,67 @@
 {
-    "title": "Legal Support",
-    "icon": "Scale",
-    "color": "text-purple-500",
-    "resources": [
-      {
-        "title": "Know Your Rights Guide",
-        "description": "Legal rights and protections",
-        "url": "#",
-        "type": "Guide"
-      },
-      {
-        "title": "Legal Aid Organizations",
-        "description": "Free and low-cost legal services",
-        "url": "#",
-        "type": "Directory"
-      },
-      {
-        "title": "Family Law Resources",
-        "description": "Custody, adoption, and family legal matters",
-        "url": "#",
-        "type": "Legal"
-      }
-    ]
-  }
+  "title": "Legal Support — Metro + National",
+  "icon": "Scale",
+  "color": "text-purple-500",
+  "resources": [
+    {
+      "title": "Free Legal Aid Clinic (FLAC)",
+      "description": "Provides legal assistance in family and elder law to low-income and elderly residents of Wayne County. Operated by Wayne State University Law School students under attorney supervision.",
+      "url": "https://www.detroitflac.com/",
+      "type": "Clinic"
+    },
+    {
+      "title": "Legal Aid and Defender Association (LAD)",
+      "description": "Offers free civil legal services to low- and moderate-income residents of Macomb, Oakland, and Wayne counties. Services include family law, housing, and public benefits.",
+      "url": "https://ladadetroit.org/",
+      "type": "Organization"
+    },
+    {
+      "title": "Lakeshore Legal Aid",
+      "description": "Provides free civil legal services to low-income individuals, older adults, and survivors of domestic violence and sexual assault in Southeast Michigan.",
+      "url": "https://lakeshorelegalaid.org/",
+      "type": "Organization"
+    },
+    {
+      "title": "William Booth Legal Aid Clinic",
+      "description": "Offers free legal aid to low-income individuals and families in Detroit, focusing on family law, domestic violence, and immigration issues.",
+      "url": "https://centralusa.salvationarmy.org/greatlakes/wblac/",
+      "type": "Clinic"
+    },
+    {
+      "title": "Michigan Legal Services",
+      "description": "Provides free representation in housing, public benefits, and community economic development matters to low-income people in Wayne County.",
+      "url": "https://michiganlegalhelp.org/find-lawyer/michigan-legal-services",
+      "type": "Organization"
+    },
+    {
+      "title": "Detroit Legal Services Clinic",
+      "description": "Offers information and advice from volunteer attorneys in areas such as divorce, child support, domestic relations, expungements, and more.",
+      "url": "https://www.detroitlawyer.org/clinic/",
+      "type": "Clinic"
+    },
+    {
+      "title": "Legal Self-Help Center of Wayne County",
+      "description": "Provides free assistance with simple legal problems, including access to self-help tools and referrals on MichiganLegalHelp.org.",
+      "url": "https://michiganlegalhelp.org/self-help-centers/legal-self-help-center-of-wayne-county",
+      "type": "Resource Center"
+    },
+    {
+      "title": "Civil Rights Litigation Initiative (CRLI)",
+      "description": "Offers students the opportunity to work on important civil rights cases in a clinical setting, focusing on issues like racial justice, police misconduct, and voting rights.",
+      "url": "https://michigan.law.umich.edu/academics/experiential-learning/clinics/civil-rights-litigation-initiative",
+      "type": "Clinic"
+    },
+    {
+      "title": "Michigan Poverty Law Program (MPLP)",
+      "description": "Works to advance the health, safety, and economic security of low-income Michiganders and advance racial justice through systemic advocacy.",
+      "url": "https://mplp.org/",
+      "type": "Advocacy Program"
+    },
+    {
+      "title": "Black Women Lawyers Association of Michigan",
+      "description": "Provides support and networking opportunities for Black women in the legal profession, including mentorship and career development.",
+      "url": "https://www.bwlami.org/",
+      "type": "Professional Association"
+    }
+  ]
+}

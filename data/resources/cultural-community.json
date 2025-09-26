@@ -1,25 +1,67 @@
 {
-    "title": "Cultural & Community",
-    "icon": "BookOpen",
-    "color": "text-orange-500",
-    "resources": [
-      {
-        "title": "Black Children's Books",
-        "description": "Diverse literature for young readers",
-        "url": "#",
-        "type": "Educational"
-      },
-      {
-        "title": "Cultural Events Calendar",
-        "description": "Black history and cultural celebrations",
-        "url": "#",
-        "type": "Events"
-      },
-      {
-        "title": "Community Organizations",
-        "description": "Local Black community groups and nonprofits",
-        "url": "#",
-        "type": "Directory"
-      }
-    ]
-  }
+  "title": "Cultural & Community",
+  "icon": "BookOpen",
+  "color": "text-orange-500",
+  "resources": [
+    {
+      "title": "Black Children’s Books & Authors Directory",
+      "description": "Promotes awareness of children’s & YA literature by Black authors",
+      "url": "https://bcbooksandauthors.com/",
+      "type": "Educational"
+    },
+    {
+      "title": "African American Books for Kids (diversity reading list)",
+      "description": "Curated multicultural reading lists for children",
+      "url": "https://readyourworld.org/multicultural-reading-resources/diversity-book-lists-for-kids/seeing-yourself-in-childrens-books/",
+      "type": "Educational"
+    },
+    {
+      "title": "MahoganyBooks — Black Children’s Books",
+      "description": "Online bookstore focusing on books by Black authors (children’s section)",
+      "url": "https://www.mahoganybooks.com/children/",
+      "type": "Educational"
+    },
+    {
+      "title": "Detroit African American Events (Eventbrite)",
+      "description": "Calendar of cultural, community, music, and arts events in Detroit",
+      "url": "https://www.eventbrite.com/d/mi--detroit/african-american/",
+      "type": "Events"
+    },
+    {
+      "title": "The Wright Museum Events",
+      "description": "Upcoming performances, film festivals, cultural events at The Wright",
+      "url": "https://www.thewright.org/whats-on/events",
+      "type": "Events"
+    },
+    {
+      "title": "Hotter Than July! Festival (Detroit)",
+      "description": "Annual Black LGBT Pride / cultural festival in Detroit",
+      "url": "https://en.wikipedia.org/wiki/Hotter_than_July_%28festival%29",
+      "type": "Events"
+    },
+    {
+      "title": "Black Young Professionals of Metro Detroit (BYP Detroit)",
+      "description": "Networking, community events & professional development for Black professionals in metro Detroit",
+      "url": "https://www.bypdetroit.org/",
+      "type": "Directory"
+    },
+    {
+      "title": "Detroit Black Community Food Security Network (DBCFSN) / D-Town Farm",
+      "description": "Community agriculture & food sovereignty network serving Detroit neighborhoods",
+      "url": "https://www.dbcfsn.org/",
+      "type": "Community"
+    },
+    {
+      "title": "Eastside Community Network (Detroit) Events",
+      "description": "Community classes, workshops and events in Detroit’s east side",
+      "url": "https://www.ecn-detroit.org/calendar",
+      "type": "Events"
+    },
+    {
+      "title": "LGBT Detroit",
+      "description": "Nonprofit serving Detroit’s Black LGBTQ community through advocacy, support, events",
+      "url": "http://www.lgbtdetroit.org",
+      "type": "Community"
+    }
+  ]
+}

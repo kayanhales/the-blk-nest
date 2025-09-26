@@ -1,25 +1,49 @@
 {
-    "title": "Financial Resources",
-    "icon": "DollarSign",
-    "color": "text-green-500",
-    "resources": [
-      {
-        "title": "Black-Owned Banks Directory",
-        "description": "Support Black-owned financial institutions",
-        "url": "#",
-        "type": "Directory"
-      },
-      {
-        "title": "Financial Literacy for Families",
-        "description": "Money management and investment basics",
-        "url": "#",
-        "type": "Educational"
-      },
-      {
-        "title": "Small Business Resources",
-        "description": "Support for Black entrepreneurs",
-        "url": "#",
-        "type": "Business"
-      }
-    ]
-  }
+  "title": "Financial Resources",
+  "icon": "DollarSign",
+  "color": "text-green-500",
+  "resources": [
+    {
+      "title": "Black-Owned Banks Directory (NerdWallet)",
+      "description": "List of Black-owned banks and credit unions across the U.S.",
+      "url": "https://www.nerdwallet.com/article/banking/black-owned-banks-and-credit-unions",
+      "type": "Directory"
+    },
+    {
+      "title": "Minority Depository Institutions List (FDIC)",
+      "description": "FDIC’s locator for MDIs & CDFIs — banks serving underserved communities",
+      "url": "https://www.fdic.gov/minority-depository-institutions-program/minority-depository-institutions-list",
+      "type": "Directory"
+    },
+    {
+      "title": "List of Minority Depository Credit Unions (NCUA)",
+      "description": "Federally insured credit unions that report as minority depository institutions",
+      "url": "https://www.ncua.gov/support-services/credit-union-resources-expansion/minority-depository-institutions/list-mdis",
+      "type": "Directory"
+    },
+    {
+      "title": "Black-Owned Banks in America (Investopedia)",
+      "description": "State-by-state list and overview of Black-owned banks",
+      "url": "https://www.investopedia.com/black-owned-banks-by-state-5024944",
+      "type": "Directory"
+    },
+    {
+      "title": "Financial Therapy Association — Find a Financial Therapist",
+      "description": "Directory of therapists, financial coaches, & CFT™ practitioners",
+      "url": "https://financialtherapyassociation.org/find-a-financial-therapist/",
+      "type": "Wellness"
+    },
+    {
+      "title": "InCharge: Financial Help for Black & African Americans",
+      "description": "Debt assistance, credit counseling, and financial support resources",
+      "url": "https://www.incharge.org/debt-relief/financial-help-african-americans/",
+      "type": "Tool"
+    },
+    {
+      "title": "Helping Communities of Color (FFP Pro Bono)",
+      "description": "Pro bono financial advice & planning support for underserved communities",
+      "url": "https://ffpprobono.org/our-work/national-programs/communities-of-color/",
+      "type": "Support"
+    }
+  ]
+}
