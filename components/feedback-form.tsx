@@ -21,13 +21,27 @@ export function FeedbackForm() {
 
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // For MVP, we'll just show a success message
-    // In production, this would send to a backend or email service
-    console.log("Feedback submission:", formData)
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+
+  try {
+    const response = await fetch("/api/submit-feedback", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    })
+
+    if (!response.ok) {
+      throw new Error("Failed to submit feedback")
+    }
+
     setIsSubmitted(true)
+  } catch (err) {
+    console.error(err)
+    alert("Oops! Something went wrong. Please try again.")
   }
+}
+
 
   const handleChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }))
