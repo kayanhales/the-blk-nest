@@ -1,6 +1,7 @@
 "use client"
 
 import { ContributionForm } from "@/components/contribution-form"
+import {ResourceContributionForm} from "@/components/resource-contribution-form"
 import { Button } from "@/components/ui/button"
 import { Code, GitBranch, FileText } from "lucide-react"
 import { Header } from "@/components/header"
@@ -69,10 +70,10 @@ export default function ContributePage() {
 
         <div id="provider-contribution-form">
           <ContributionForm />
-        </div>
+        </div><br />
 
         <div id="resource-contribution-form">
-          <ContributionForm />
+          <ResourceContributionForm />
         </div>
 
         <div id="github-guide" className="mt-16">
@@ -86,13 +87,13 @@ export default function ContributePage() {
               <div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">For Developers</h3>
                 <p className="text-pretty">
-                  The BLK Nest is built as an open-source project. Technical contributors can add providers directly by
+                  The BLK Nest is built as an open-source project. Technical contributors can add providers and resources directly by
                   editing our JSON files and submitting pull requests.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">JSON File Structure</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-2">JSON File Structure for Providers</h3>
                 <div className="bg-muted/50 rounded-lg p-4 font-mono text-sm overflow-x-auto">
                   <pre>{`{
                     "id": "unique-provider-id",
@@ -112,11 +113,25 @@ export default function ContributePage() {
               </div>
 
               <div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">JSON File Structure for Resources</h3>
+                <div className="bg-muted/50 rounded-lg p-4 font-mono text-sm overflow-x-auto">
+                  <pre>{`{
+                    "id": "unique-provider-id",
+                    "resourceType": "Financial",
+                    "url": "https://example.com",
+                    "description": "Board-certified pediatrician...",
+                    "type": "Education, Seminar, Facilty",
+                    "acceptsInsurance": true
+                  }`}</pre>
+                </div>
+              </div>
+
+              <div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">How to Contribute</h3>
                 <ol className="list-decimal list-inside space-y-2 ml-4">
                   <li>Fork the repository on GitHub</li>
                   <li>
-                    Add providers to the appropriate JSON file in the{" "}
+                    Add providers or resources to the appropriate JSON file in the{" "}
                     <code className="bg-muted px-1 rounded">/data</code> directory
                   </li>
                   <li>Follow the existing JSON structure exactly</li>
@@ -157,7 +172,7 @@ export default function ContributePage() {
           <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
             <h2 className="text-xl font-semibold text-foreground mb-3">Why Contribute?</h2>
             <p className="text-muted-foreground text-pretty">
-              Every provider you add helps another Black family find the care and support they need. Together, we're
+              Every provider and/or resource you add helps another Black family find the care and support they need. Together, we're
               building a stronger, more connected community where Black families can thrive.
             </p>
           </div>
