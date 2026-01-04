@@ -116,7 +116,7 @@ export default function ContributePage() {
                 <h3 className="text-lg font-semibold text-foreground mb-2">JSON File Structure for Resources</h3>
                 <div className="bg-muted/50 rounded-lg p-4 font-mono text-sm overflow-x-auto">
                   <pre>{`{
-                    "id": "unique-provider-id",
+                    "id": "unique-resource-id",
                     "resourceType": "Financial",
                     "url": "https://example.com",
                     "description": "Board-certified pediatrician...",

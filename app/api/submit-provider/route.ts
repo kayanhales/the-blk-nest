@@ -13,34 +13,29 @@ const octokit = new Octokit({ auth: GITHUB_PAT });
 const OWNER = GITHUB_USERNAME;
 const REPO = REPO_NAME;
 
-// Map resource types to their JSON file paths
-const RESOURCE_FILE_MAP: Record<string, string> = {
-  "cultural-community": "data/resources/cultural-community.json",
-  "education-development": "data/resources/education-development.json",
-  financial: "data/resources/financial.json",
-  "health-wellness": "data/resources/health-wellness.json",
-  "legal-support": "data/resources/legal-support.json",
-  "parenting-family": "data/resources/parenting-family.json",
-  //other: "data/resources/other.json",
+// Map provider types to their JSON file paths
+const PROVIDER_FILE_MAP: Record<string, string> = {
+  doula: "data/providers/doulas.json",
+  pediatrician: "data/providers/pediatricians.json",
+  "pelvic-floor-therapist": "data/providers/pelvic-floor-therapists.json",
 };
-
 
 export async function POST(req: NextRequest) {
   try {
     const submission = await req.json();
 
-    if (!submission.resourceType || !RESOURCE_FILE_MAP[submission.resourceType]) {
-      throw new Error("Invalid or missing resource type");
+    if (!submission.providerType || !PROVIDER_FILE_MAP[submission.providerType]) {
+      throw new Error("Invalid or missing provider type");
     }
 
-    const FILE_PATH = RESOURCE_FILE_MAP[submission.resourceType];
+    const FILE_PATH = PROVIDER_FILE_MAP[submission.providerType];
 
     // 1️⃣ Get default branch
     const { data: repoData } = await octokit.repos.get({ owner: OWNER, repo: REPO });
     const defaultBranch = repoData.default_branch;
 
     // 2️⃣ Create a new branch for this submission
-    const branchName = `submission-${submission.resourceType}-${Date.now()}`;
+    const branchName = `submission-${submission.providerType}-${Date.now()}`;
     const { data: refData } = await octokit.git.getRef({
       owner: OWNER,
       repo: REPO,
@@ -81,7 +76,7 @@ export async function POST(req: NextRequest) {
       owner: OWNER,
       repo: REPO,
       path: FILE_PATH,
-      message: `Add new ${submission.resourceType}: ${submission.title || "Untitled"}`,
+      message: `Add new ${submission.providerType}: ${submission.name || "Untitled"}`,
       content: updatedContent,
       branch: branchName,
       sha: fileSha,
@@ -91,7 +86,7 @@ export async function POST(req: NextRequest) {
     const pr = await octokit.pulls.create({
       owner: OWNER,
       repo: REPO,
-      title: `New ${submission.resourceType} Submission: ${submission.title || "Untitled"}`,
+      title: `New ${submission.providerType} Submission: ${submission.name || "Untitled"}`,
       head: branchName,
       base: defaultBranch,
       body: `${JSON.stringify(submission, null, 2)}`,

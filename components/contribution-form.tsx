@@ -46,7 +46,7 @@ export function ContributionForm() {
         acceptsInsurance: formData.acceptsInsurance === "yes",
       }
 
-      const response = await fetch("/api/submit-resource", {
+      const response = await fetch("/api/submit-provider", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(submission),
